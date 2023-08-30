@@ -11,7 +11,7 @@ async function getCatigory(catigoyr: any) {
   return data;
 }
 
-const productsCatigoyr = async () => {
+const ProductsCatigoyr = async () => {
   const { slug } = useParams();
   const data = await getCatigory(slug);
 
@@ -26,4 +26,4 @@ const productsCatigoyr = async () => {
   );
 };
 
-export default productsCatigoyr;
+export default ProductsCatigoyr ;

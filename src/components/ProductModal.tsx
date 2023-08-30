@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import CustomImage from "./CustomImage";
 import { useState } from "react";
 
-const ProductModal = async () => {
+const ProductModal =  () => {
   
   const router = useRouter();
   
