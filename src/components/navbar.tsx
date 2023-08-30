@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isLoading, setisLoading] = useState(false);
   const [isErorr, setisErorr] = useState(false)
   const router = useRouter()
-  
+
   useEffect(() => {
     async function getCatigory() {
       try {
@@ -82,9 +82,10 @@ const Navbar = () => {
                   // tabindex="-1"
                 >
                   <div role="none">
-                    {catigoyr.map((item) => {
+                    {catigoyr.map((item , index) => {
                       return (
                         <Link
+                        key={index}
                         onClick={() => setdropDown(false)}
                           href={`/products/${item}`}
                           className="text-gray-700 hover:bg-green-100 active:bg-green-400 block px-4 py-2 text-sm"
