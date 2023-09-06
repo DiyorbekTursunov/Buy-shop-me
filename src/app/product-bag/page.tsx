@@ -2,6 +2,7 @@
 
 import ProductBagItem from "@/components/ProductBagItem";
 import { AnyTxtRecord } from "dns";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 function ProductBag() {
@@ -28,7 +29,6 @@ function ProductBag() {
     }, 0);
     settotal(total);
   }, [Product]);
-
   function BuyProduct() {
     setProduct([])
     localStorage.removeItem('product')
@@ -63,7 +63,7 @@ function ProductBag() {
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <polyline points="15 6 9 12 15 18" />
             </svg>
-            <p className="text-sm pl-2 leading-none">Back</p>
+            <Link href={'/'} className="text-sm pl-2 leading-none">Back</Link>
           </div>
           <p className="text-5xl font-black leading-10 text-gray-800 pt-3 mb-8">
             Bag
@@ -95,7 +95,7 @@ function ProductBag() {
               <p>${Math.floor(total)}</p>
             </div>
           </div>
-          <button onClick={() => BuyProduct()} className="w-full py-3 rounded-xl bg-green-400">Buy</button>
+          <button onClick={() => BuyProduct()} className={`w-full py-3 rounded-xl bg-green-400 `}>Buy</button>
         </div>
       </div>
     </>
